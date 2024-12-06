@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo and Name -->
+        <div id="header">
+            <img class="logo" src="./images/download.png" alt="App Logo">
+            <h1>BLOGS</h1>
+        </div>
+
+        <!-- Login and Register Modals -->
+        <div id="login-register">
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForms()">Register</a></p>
+            </div>
+            <div id="register-form">
+                <h2>Register</h2>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <button onclick="register()">Register</button>
+                <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+            </div>
+        </div>
+
+        <!-- Post Form -->
+        <div id="post-section">
+            <input type="text" id="search-bar" placeholder="Search Posts..." oninput="searchPosts()">
+            <textarea id="post-content" placeholder="Write something..."></textarea>
+            <select name="dropdown" id="categories">
+                <option value="it">IT</option>
+                <option value="fas">Fashion</option>
+                <option value="tre">Trends</option>
+                <option value="pol">Politics</option>
+            </select>
+            <button onclick="createPost()">Post</button>
+          
+        </div>
+
+        <!-- Post Display -->
+        <div id="posts-display"></div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script type="module"  src="firebase.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="module" src="firebase.js"></script>
+
+
